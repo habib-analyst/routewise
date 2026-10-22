@@ -1,0 +1,32 @@
+{
+  "client": "litellm.completion (OpenAI-compatible mode)",
+  "requests": [
+    {
+      "prompt": "What is the largest ocean on Earth?",
+      "latency_s": 1446.093,
+      "answer": "The largest ocean on Earth is the Pacific Ocean. It covers an area of approximat",
+      "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 32
+      }
+    },
+    {
+      "prompt": "Write Python code to check whether a string is a p",
+      "latency_s": 18.759,
+      "answer": "Certainly! A palindrome is a word, phrase, number, or other sequence of characte",
+      "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 32
+      }
+    },
+    {
+      "prompt": "Sara has 3 boxes with 12 pencils each. She gives a",
+      "latency_s": 22.474,
+      "answer": "To determine how many pencils Sara has left after giving some away, we can follo",
+      "usage": {
+        "prompt_tokens": 57,
+        "completion_tokens": 32
+      }
+    }
+  ]
+}

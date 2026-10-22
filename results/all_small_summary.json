@@ -1,0 +1,36 @@
+{
+  "strategy": "all_small",
+  "model_field": "small",
+  "complete": true,
+  "requests": 20,
+  "wall_seconds_measured_requests_only": 423.71,
+  "latency_mean_s": 21.185,
+  "latency_p95_s": 34.057,
+  "latency_max_s": 36.803,
+  "total_prompt_tokens": 1647,
+  "total_completion_tokens": 1334,
+  "quality_pass": 17,
+  "quality_total": 20,
+  "quality_by_category": {
+    "factual": {
+      "n": 6,
+      "pass": 6
+    },
+    "summary": {
+      "n": 4,
+      "pass": 4
+    },
+    "code": {
+      "n": 5,
+      "pass": 5
+    },
+    "reasoning": {
+      "n": 5,
+      "pass": 2
+    }
+  },
+  "backend_counts": {
+    "small": 20,
+    "large": 0
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "started_ts": 1792611389.3651707,
+  "platform": "Linux-7.0.0-39-generic-x86_64-with-glibc2.39",
+  "cpu": "x86_64",
+  "torch": "2.13.0+cpu",
+  "transformers": "5.19.0",
+  "load_average_at_start": [
+    9.08984375,
+    11.0341796875,
+    11.46533203125
+  ],
+  "micro_bench": {
+    "small": {
+      "seconds_for_32_tokens": 42.63,
+      "tokens_per_second": 0.751
+    },
+    "large": {
+      "seconds_for_32_tokens": 107.62,
+      "tokens_per_second": 0.297
+    }
+  },
+  "note": "This VM is shared; load average during the run is recorded because it dominates single-request latency here."
+}

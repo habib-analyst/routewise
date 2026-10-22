@@ -1,0 +1,57 @@
+[
+  {
+    "phase": "routed:S4",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637589.1775057
+  },
+  {
+    "phase": "routed:C1",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637592.6437652
+  },
+  {
+    "phase": "routed:C2",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637595.8059907
+  },
+  {
+    "phase": "routed:C3",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637599.0960052
+  },
+  {
+    "phase": "routed:C4",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637602.3592312
+  },
+  {
+    "phase": "routed:C5",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637605.6476965
+  },
+  {
+    "phase": "routed:R1",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637608.8830338
+  },
+  {
+    "phase": "routed:R2",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637612.063013
+  },
+  {
+    "phase": "routed:R3",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637615.3427544
+  },
+  {
+    "phase": "routed:R4",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637618.671582
+  },
+  {
+    "phase": "routed:R5",
+    "error": "RuntimeError: HTTP 502",
+    "ts": 1792637621.783867
+  }
+]

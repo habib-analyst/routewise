@@ -1,0 +1,13 @@
+{
+  "rss_after_load_mb": 627.3,
+  "rss_after_gen_mb": 3433.2,
+  "pgmajfault_delta_during_gen": 8468,
+  "seconds": 131.67,
+  "usage": {
+    "prompt_tokens": 40,
+    "completion_tokens": 96,
+    "total_tokens": 136
+  },
+  "backend_seconds": 129.0862,
+  "answer_preview": "Certainly! The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually"
+}

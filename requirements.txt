@@ -1,0 +1,8 @@
+# Versions are the ones the build and benchmark actually ran with.
+torch==2.13.0+cpu
+transformers==5.19.0
+fastapi==0.136.3
+uvicorn==0.54.0
+httpx==0.28.1
+litellm==1.106.2
+matplotlib==3.11.2

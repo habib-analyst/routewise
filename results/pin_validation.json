@@ -1,0 +1,15 @@
+{
+  "rss_large_after_start_mb": 3417.4,
+  "small_request_s": 18.91,
+  "rss_large_after_churn_mb": 3404.4,
+  "rss_large_after_idle_mb": 3404.4,
+  "large_request_s": 46.99,
+  "large_backend_seconds": 34.946,
+  "large_usage": {
+    "prompt_tokens": 40,
+    "completion_tokens": 32,
+    "total_tokens": 72
+  },
+  "pgmajfault_delta": 1525,
+  "rss_large_after_gen_mb": 3427.3
+}

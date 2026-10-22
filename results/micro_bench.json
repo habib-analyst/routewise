@@ -1,0 +1,10 @@
+{
+  "small": {
+    "seconds_for_32_tokens": 42.63,
+    "tokens_per_second": 0.751
+  },
+  "large": {
+    "seconds_for_32_tokens": 107.62,
+    "tokens_per_second": 0.297
+  }
+}

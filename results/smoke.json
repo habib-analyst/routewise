@@ -1,0 +1,15 @@
+{
+  "factual_routes_to": "small",
+  "factual_answer": "The capital of France is Paris.",
+  "code_routes_to": "large",
+  "economy_probe_actions": [
+    "input_truncated_to_tier_cap",
+    "output_capped_to_tier_budget"
+  ],
+  "economy_probe_usage": {
+    "prompt_tokens": 250,
+    "completion_tokens": 48,
+    "total_tokens": 298
+  },
+  "over_limit_status": 400
+}

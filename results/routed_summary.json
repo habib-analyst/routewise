@@ -1,0 +1,36 @@
+{
+  "strategy": "routed",
+  "model_field": "routewise-auto",
+  "complete": true,
+  "requests": 20,
+  "wall_seconds_measured_requests_only": 1153.07,
+  "latency_mean_s": 57.654,
+  "latency_p95_s": 74.154,
+  "latency_max_s": 335.072,
+  "total_prompt_tokens": 1647,
+  "total_completion_tokens": 1311,
+  "quality_pass": 15,
+  "quality_total": 20,
+  "quality_by_category": {
+    "factual": {
+      "n": 6,
+      "pass": 6
+    },
+    "summary": {
+      "n": 4,
+      "pass": 4
+    },
+    "code": {
+      "n": 5,
+      "pass": 4
+    },
+    "reasoning": {
+      "n": 5,
+      "pass": 1
+    }
+  },
+  "backend_counts": {
+    "small": 8,
+    "large": 12
+  }
+}

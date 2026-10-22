@@ -1,0 +1,62 @@
+{
+  "assumptions": {
+    "instance": "AWS c7i-flex.large (2 vCPU, 4 GiB), On-Demand, us-east-1",
+    "instance_price_usd_per_hour": 0.0848,
+    "instance_price_source": "RunsOn EC2 finder listing for c7i-flex.large, prices fetched 2026-10-20: on-demand $0.0848/hr in us-east-1",
+    "hardware_equivalence": "This VM (2 x86-64 vCPUs, 7.75 GiB RAM, no GPU) is treated as equivalent to that instance class for cost purposes.",
+    "serving_model": "Sequential single-request serving, no batching. A strategy costs instance_price x its measured wall time for the workload's requests. Model load time and idle time are excluded. Both backends share the one instance in the routed deployment.",
+    "gpu_reference_only": "An AWS g5.xlarge (1x A10G) lists at about $1.006/hr On-Demand (Thunder Compute and Wring EC2 guides, Oct 2026). No GPU throughput was measured on this VM, so no GPU per-token cost is derived; the figure is context only."
+  },
+  "per_backend_decode_economics": {
+    "small": {
+      "completion_tokens": 1613,
+      "backend_seconds": 911.48,
+      "note": "backend_seconds covers prefill plus decode, so this is an effective end-to-end rate, not a pure decode rate.",
+      "effective_tokens_per_second_incl_prefill": 1.77,
+      "usd_per_1m_completion_tokens": 13.31
+    },
+    "large": {
+      "completion_tokens": 2241,
+      "backend_seconds": 1204.22,
+      "note": "backend_seconds covers prefill plus decode, so this is an effective end-to-end rate, not a pure decode rate.",
+      "effective_tokens_per_second_incl_prefill": 1.861,
+      "usd_per_1m_completion_tokens": 12.66
+    }
+  },
+  "strategies": {
+    "all_small": {
+      "requests": 20,
+      "wall_seconds": 423.71,
+      "cost_for_workload_usd": 0.00998,
+      "cost_per_1000_requests_usd": 0.5,
+      "cost_per_1m_total_tokens_usd": 3.35,
+      "quality_pass": 17,
+      "quality_total": 20,
+      "cost_per_quality_passed_request_usd": 0.00059
+    },
+    "all_large": {
+      "requests": 20,
+      "wall_seconds": 663.75,
+      "cost_for_workload_usd": 0.01563,
+      "cost_per_1000_requests_usd": 0.78,
+      "cost_per_1m_total_tokens_usd": 5.47,
+      "quality_pass": 15,
+      "quality_total": 20,
+      "cost_per_quality_passed_request_usd": 0.00104
+    },
+    "routed": {
+      "requests": 20,
+      "wall_seconds": 1153.07,
+      "cost_for_workload_usd": 0.02716,
+      "cost_per_1000_requests_usd": 1.36,
+      "cost_per_1m_total_tokens_usd": 9.18,
+      "quality_pass": 15,
+      "quality_total": 20,
+      "cost_per_quality_passed_request_usd": 0.00181
+    }
+  },
+  "savings": {
+    "routed_vs_all_large_cost_per_1k_pct": -74.4,
+    "routed_vs_all_small_cost_per_1k_pct": -172.0
+  }
+}
