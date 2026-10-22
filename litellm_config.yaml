@@ -1,0 +1,34 @@
+# Optional: put a LiteLLM Proxy in front of the two RouteWise backends.
+#
+# This is NOT how RouteWise routes by difficulty. LiteLLM's Router does
+# load balancing, retries, and fallbacks across deployments of the same
+# model group; it does not classify requests by difficulty. RouteWise's
+# own policy (router/policy.py) does the classification and budgeting,
+# and its endpoint speaks the OpenAI API, so a LiteLLM Proxy or the
+# LiteLLM client library can sit in front of it unchanged (proven by
+# bench/run_bench.py's interop phase, results/litellm_interop.json).
+#
+# With this config, `litellm --config litellm_config.yaml` exposes:
+#   model "routewise-auto" -> the RouteWise router (difficulty routing)
+#   model "small" / "large" -> the backends directly (no routing)
+
+model_list:
+  - model_name: routewise-auto
+    litellm_params:
+      model: openai/routewise-auto
+      api_base: http://127.0.0.1:8100/v1
+      api_key: sk-routewise-local
+  - model_name: small
+    litellm_params:
+      model: openai/small
+      api_base: http://127.0.0.1:8101/v1
+      api_key: sk-routewise-local
+  - model_name: large
+    litellm_params:
+      model: openai/large
+      api_base: http://127.0.0.1:8102/v1
+      api_key: sk-routewise-local
+
+router_settings:
+  routing_strategy: simple-shuffle
+  num_retries: 1
